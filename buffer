@@ -8,10 +8,15 @@
 			function makeBuffer(){
 				var text = "";
 
-				return function(piece){
+				function buffer(piece){
 					if(piece === undefined) return text;
 					text += piece;
 				};
+				
+				buffer.clear = function(){
+					text = "";
+				}
+				return buffer;
 			};
 
 			var buffer = makeBuffer();
@@ -20,6 +25,9 @@
 			buffer('2');
 			buffer('9');
 
+			alert(buffer());
+			
+			buffer.clear();
 			alert(buffer());
 
 
