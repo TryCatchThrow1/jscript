@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+	<body>
+		<script>
+			function makeBuffer(){
+				var text = "";
+
+				return function(piece){
+					if(piece === undefined) return text;
+					text += piece;
+				};
+			};
+
+			var buffer = makeBuffer();
+
+			buffer('1');
+			buffer('2');
+			buffer('9');
+
+			alert(buffer());
+
+
+		</script>
+	</body>
+</html>
