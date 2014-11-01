@@ -1,0 +1,26 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+	<body>
+		<script>
+		function Adder(startingValue){
+			this.value = startingValue;
+
+			this.addInput = function(){
+				this.value += +prompt("?", 0);
+			};
+
+			this.showValue = function(){
+				alert(value);
+			};
+		}
+
+		var adder = new Adder(1);
+		adder.addInput();
+		adder.addInput();
+		adder.showValue();
+		</script>
+	</body>
+</html>
